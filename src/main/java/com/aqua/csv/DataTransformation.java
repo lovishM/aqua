@@ -37,7 +37,7 @@ public class DataTransformation {
 
         System.out.println("Total rows after transformation: " + processedData.size());
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(toFile))) {
-            for (CSVData.Row row: processedData.getDataRows()) {
+            for (CSVData.Row row: processedData.getRows()) {
                 writer.write(String.join(",", row.getCells()));
                 writer.newLine();
                 writer.flush();

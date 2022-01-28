@@ -39,6 +39,7 @@ public final class CSVData {
         return this;
     }
 
+    public List<Row> getRows() { return Collections.unmodifiableList(rows); }
     public List<Row> getDataRows() { return Collections.unmodifiableList(rows.subList(1, rows.size())); }
     public List<String> getHeaders() { return Collections.unmodifiableList(rows.get(0).cells); }
     public long size() { return rows.size(); }
